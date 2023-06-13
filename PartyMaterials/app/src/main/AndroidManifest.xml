@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.komputer.kit.partymaterialsforusers">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainHomepage" />
+        <activity
+            android:name=".MenuHomepage.MenuTransaksi"
+            android:parentActivityName=".MainHomepage" />
+        <activity
+            android:name=".InsideMenuTransaksi.MenuOrder"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".MenuHomepage.MenuLaporan"
+            android:parentActivityName=".MainHomepage" />
+        <activity
+            android:name=".MenuHomepage.MenuMaster"
+            android:parentActivityName=".MainHomepage" />
+        <activity
+            android:name=".InsideMenuMaster.MenuIdentitas"
+            android:parentActivityName=".MenuHomepage.MenuMaster" />
+        <activity
+            android:name=".InsideMenuMaster.MenuKategori"
+            android:noHistory="true"
+            android:parentActivityName=".MenuHomepage.MenuMaster" />
+        <activity
+            android:name=".MenuHomepage.MenuUtilitas"
+            android:parentActivityName=".MainHomepage" />
+        <activity
+            android:name=".InsideMenuMaster.MenuPelanggan"
+            android:noHistory="true"
+            android:parentActivityName=".MenuHomepage.MenuMaster" />
+        <activity
+            android:name=".LaporanVersiDua"
+            android:parentActivityName=".MenuHomepage.MenuLaporan" />
+        <activity android:name=".MainSplash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Tambah.TambahKategori"
+            android:noHistory="true"
+            android:parentActivityName=".InsideMenuMaster.MenuKategori" />
+        <activity
+            android:name=".Tambah.TambahPelanggan"
+            android:noHistory="true"
+            android:parentActivityName=".InsideMenuMaster.MenuPelanggan" />
+        <activity
+            android:name=".KonfirmasiPembayaran" />
+        <activity
+            android:name=".StrukPembayaran"
+            android:parentActivityName=".InsideMenuTransaksi.MenuOrder" />
+        <activity
+            android:name=".InsideMenuTransaksi.MenuPengembalian"
+            android:parentActivityName=".MenuHomepage.MenuTransaksi" />
+        <activity
+            android:name=".Ubah.UbahKategori"
+            android:parentActivityName=".InsideMenuMaster.MenuKategori" />
+        <activity
+            android:name=".Ubah.UbahPelanggan"
+            android:parentActivityName=".InsideMenuMaster.MenuPelanggan" />
+        <activity
+            android:name=".InsideMenuUtilitas.BackupData"
+            android:parentActivityName=".MenuHomepage.MenuUtilitas" />
+        <activity
+            android:name=".InsideMenuUtilitas.RestoreData"
+            android:parentActivityName=".MenuHomepage.MenuUtilitas" />
+        <activity
+            android:name=".InsideMenuMaster.MenuBarang"
+            android:noHistory="true"
+            android:parentActivityName=".MenuHomepage.MenuMaster" />
+        <activity
+            android:name=".Tambah.TambahBarang"
+            android:noHistory="true"
+            android:parentActivityName=".InsideMenuMaster.MenuBarang" />
+        <activity
+            android:name=".Ubah.UbahBarang"
+            android:parentActivityName=".InsideMenuMaster.MenuBarang" />
+        <activity android:name=".MenuCariBarang" />
+        <activity android:name=".MenuCariPelanggan" />
+        <activity android:name=".ActivityCetakCari" />
+        <activity
+            android:name=".LaporanVersiSatu"
+            android:parentActivityName=".MenuHomepage.MenuLaporan" />
+        <activity android:name=".ActivityExportExcel"></activity>
+    </application>
+
+</manifest>
